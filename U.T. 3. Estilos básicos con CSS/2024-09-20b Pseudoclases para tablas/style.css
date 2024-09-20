@@ -1,0 +1,30 @@
+table, td {
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    border-collapse: collapse;
+}
+
+.cabecera {
+    background-color: darkblue;
+    color: gold;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.par {
+    background-color: pink;
+}
+
+tr:first-child {
+    background-color: darkgreen;
+}
+
+tr:last-child {
+    font-weight: bold;
+}
+
+tr:nth-child(2n) {
+    background-color: aqua;
+}
