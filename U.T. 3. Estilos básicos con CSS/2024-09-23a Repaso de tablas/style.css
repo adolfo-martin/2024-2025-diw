@@ -1,0 +1,46 @@
+:root {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+th {
+    font-size: 1rem;
+}
+
+td {
+    font-size: 16px;
+}
+
+table, th, td {
+    /* border-style: solid; */
+    border-width: 3px;
+    border-color: blue;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: blue;
+    color: white;
+}
+
+tfoot {
+    background-color: lightblue;
+}
+
+tr:nth-child(2n) {
+    background-color: lightgray;
+}
+
+th, td {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+td:first-child {
+    color: blue;
+    font-weight: bold;
+}
+
+td:first-child:first-letter {
+    color: red;
+}

@@ -1,0 +1,69 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    /* dynamic viewport height */
+    background-color: lightgreen;
+    border: solid 5px red;
+}
+
+h1 {
+    background-color: aqua;
+}
+
+#parrafo1 {
+    color: chocolate;
+}
+
+.parrafo-negrita {
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+p#parrafo1 {
+    text-decoration: line-through;
+    text-transform: capitalize;
+}
+
+p#parrafo1.parrafo-negrita {
+    color: chartreuse;
+}
+
+*.parrafo-negrita {
+    text-decoration: underline;
+}
+
+/* El espacio significa descendiente */
+div .parrafo-negrita {
+    text-decoration: overline;
+    color: darkmagenta;
+}
+
+/* El mayor significa hijo */
+span>p {
+    font-style: italic;
+}
+
+/* adjacent sibling o primer hermano siguiente */
+#parrafo2+p {
+    color: red;
+}
+
+/* general siblings o hermanos siguientes */
+#parrafo3~p {
+    color: gold;
+}
+
+/* selector de atributos */
+[data-mostrar=no] {
+    opacity: 0;
+}
