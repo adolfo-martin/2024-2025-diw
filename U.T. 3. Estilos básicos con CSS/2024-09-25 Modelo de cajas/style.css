@@ -1,0 +1,39 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    /* overflow: hidden; */
+}
+
+p {
+    border-style: solid;
+    border-width: 20px 5px;
+    /* border-top-color: red;
+    border-right-color: green;
+    border-bottom-color: blue;
+    border-left-color: yellow; */
+    border-color: red green blue yellow;
+    border-color: red green;
+    margin: 50px;
+    padding: 100px 50px;
+    background-color: rgb(25, 101, 101);
+    background-image: url(./pattern.png);
+    color: gold;
+}
+
+/* box-sizing */
+.caja {
+    background-color: chocolate;
+    width: 200px;
+    height: 200px;
+    padding: 25px;
+}

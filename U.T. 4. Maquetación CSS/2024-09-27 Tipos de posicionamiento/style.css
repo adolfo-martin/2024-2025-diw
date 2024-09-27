@@ -1,0 +1,83 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: bisque;
+    min-height: 100dvh;
+}
+
+.box {
+    border: solid 2px red;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: static;
+}
+
+.ads {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    color: white;
+    border: double 5px white;
+    font-size: 10px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}
+
+.ads>div:first-child {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+}
+
+.ads>div:nth-child(2) {
+    font-size: 1.5em;
+}
+
+.ads>div:nth-child(3) {
+    background-color: white;
+    color: red;
+    padding: 0.5em;
+    display: inline;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* .ads>div:nth-child(3):hover {
+    background-color: gold;
+} */
+
+.ads:has(div:nth-child(3):hover) {
+    top: 150px;
+}
+
+.box-2 {
+    background-color: cyan;
+    position: absolute;
+    z-index: 100;
+    left: 25px;
+    top: 25px;
+}
+
+.box-3 {
+    background-color: purple;
+}
+
+.box-4 {
+    background-color: chartreuse;
+    position: relative;
+    left: 25px;
+    top: 25px;
+}

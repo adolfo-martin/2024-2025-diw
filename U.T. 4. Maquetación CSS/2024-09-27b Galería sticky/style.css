@@ -1,0 +1,33 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --ancho-galeria: 400px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+.galeria {
+    border: solid 10px chartreuse;
+    width: var(--ancho-galeria);
+    height: calc((var(--ancho-galeria) / 16) * 9);
+    /* overflow-x: hidden;
+    overflow-y: scroll; */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+img {
+    width: var(--ancho-galeria);
+    aspect-ratio: 16/9;
+    /* position: sticky; */
+    /* top: 0; */
+
+}
