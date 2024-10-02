@@ -1,0 +1,67 @@
+:root {
+    font-size: 40px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+}
+
+.box-blue {
+    background-color: blue;
+    transition-duration: 1000ms;
+    transition-property: width background-color;
+    transition-timing-function: linear;
+    transition-delay: 1500ms;
+}
+
+.box-blue:hover {
+    width: 400px;
+    /* height: 400px; */
+    background-color: chartreuse;
+}
+
+.box-red {
+    margin-top: 50px;
+    background-color: red;
+    transition: width 2000ms linear 1s;
+}
+
+.box-red:hover {
+    width: 600px;
+}
+
+.box-green {
+    background-color: green;
+    transition-property: width, height, background-color;
+    transition-duration: 5s, 1s, 3s;
+    transition-timing-function: linear;
+    transition-delay: 0s, 2s, 0s;
+}
+
+.box-green:hover {
+    width: 100px;
+    height: 100px;
+    background-color: chocolate;
+}
+
+label {
+    font-weight: bold;
+    color: red;
+    border-bottom: solid 0px red;
+    transition-property: border-bottom-width;
+    transition-timing-function: linear;
+    transition-duration: 1s;
+}
+
+input[type=radio] {
+    accent-color: red;
+}
+
+input[type=radio]:checked+label{
+    border-bottom: solid 5px red;
+}
+
+/* input[type=radio]:checked {
+    accent-color: gold;
+} */

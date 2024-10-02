@@ -1,0 +1,38 @@
+.outer-box {
+    background-color: blue;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+}
+
+.inner-box {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.outer-circle {
+    background-color: green;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    top: 500px;
+    left: 500px;
+}
+
+.inner-circle {
+    background-color: magenta;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    inset: 0;
+}
