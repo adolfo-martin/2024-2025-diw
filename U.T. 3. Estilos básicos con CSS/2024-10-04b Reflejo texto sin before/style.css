@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: black;
+    color: white;
+    display: grid;
+    place-content: center;
+}
+
+div {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.reflejo {
+    transform: rotateX(0.5turn);
+    background-clip: text;
+    background-image: linear-gradient(black, 70%, white);
+    color: transparent;
+    position: relative;
+    top: -20px;
+}
