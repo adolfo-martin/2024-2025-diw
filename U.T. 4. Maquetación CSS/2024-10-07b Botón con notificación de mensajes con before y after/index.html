@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="tDivMensajes" class="mensajes" data-mensajes-pendientes="1">Mensajes</div>
+
+    <script>
+
+        setTimeout(() => {
+            const nDiv = document.getElementById('tDivMensajes');
+            nDiv.dataset.mensajesPendientes = 2;
+        }, 3000);
+
+        setTimeout(() => {
+            const nDiv = document.getElementById('tDivMensajes');
+            nDiv.dataset.mensajesPendientes = 3;
+        }, 7000);
+    </script>
+</body>
+</html>

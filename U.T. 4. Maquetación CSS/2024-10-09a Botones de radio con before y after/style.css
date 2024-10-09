@@ -1,0 +1,55 @@
+:root {
+    font-size: 80px;
+}
+
+* , *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100dvh;
+    background-color: lightpink;
+    margin: 100px;
+}
+
+label {
+    display: block;
+}
+
+input[type=radio] {
+    /* accent-color: green; */
+    appearance: none;
+    position: relative;
+    border: solid 5px red;
+    width: 120px;
+    height: 60px;
+    border-radius: 60px;
+    transition-duration: 500ms;
+    transition-property: border-color;
+    transition-timing-function: linear;
+}
+
+input[type=radio]:checked {
+    border-color: green;
+}
+
+input[type=radio]::before {
+    content: "";
+    position: absolute;
+    background-image: url(./mario.webp);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: calc(50% - 20px);
+    left: 5px;
+    transition-duration: 500ms;
+    transition-property: left;
+    transition-timing-function: linear;
+}
+
+input[type=radio]:checked::before {
+    left: 65px;
+}
