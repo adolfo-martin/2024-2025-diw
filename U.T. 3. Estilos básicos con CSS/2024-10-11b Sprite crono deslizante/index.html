@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="numero" id="tDivNumero"></div>
+    <div class="mensaje" id="tDivMensaje">Adelante</div>
+
+    <script>
+        let nuevaPosicion = -800;
+
+        function desplazarNumero() {
+            const nDiv = document.getElementById('tDivNumero');
+            nuevaPosicion += 2.25;
+            nDiv.style.backgroundPositionX = nuevaPosicion + 'px';
+
+            if (nuevaPosicion >= 0) {
+                clearInterval(intervaloId);
+                document.getElementById('tDivMensaje').style.display = 'block';
+                document.getElementById('tDivMensaje').style.color = 'red';
+                document.getElementById('tDivMensaje').style.textTransform = 'uppercase';
+            }
+        }
+
+        const intervaloId = setInterval(desplazarNumero, 25);
+    </script>
+</body>
+</html>

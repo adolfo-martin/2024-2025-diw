@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div>
+        <div class="numero" id="tDivNumero"></div>
+        <div class="numero" id="tDivNumero"></div>
+    </div>
+
+    <script>
+        let contador = 9;
+
+        const intervaloId = setInterval(retrocederSegundo, 1000);
+
+        function retrocederSegundo() {
+            contador--;
+            // console.log(contador);
+            console.log();
+            const nDiv = document.getElementById('tDivNumero');
+            nDiv.style.backgroundPositionX = `${contador * -90}px`;
+
+            if (contador === 0) {
+                clearInterval(intervaloId)
+            }
+        }
+
+    </script>
+</body>
+</html>
