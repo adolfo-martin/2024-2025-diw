@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        div {
+            flex-grow: 1;
+        }
+
+        div:nth-child(2) {
+            flex-grow: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="background-color: red;">rojo</div>
+    <div style="background-color: green;">verde</div>
+    <div style="background-color: blue;">azul</div>
+    <div style="background-color: cyan;">celeste</div>
+    <div style="background-color: magenta;">purpura</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .semaforo {
+            background-color: black;
+            display: inline-flex;
+            flex-direction: column;
+            gap: 25px;
+            padding: 25px;
+        }
+
+        .luz {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .luz-roja {
+            background-color: red;
+        }
+
+        .luz-naranja {
+            background-color: orange;
+        }
+
+        .luz-verde {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="semaforo">
+        <div class="luz luz-roja">r</div>
+        <div class="luz luz-naranja">n</div>
+        <div class="luz luz-verde">v</div>
+    </div>
+</body>
+</html>
