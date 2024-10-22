@@ -1,0 +1,24 @@
+body {
+    background-color: yellow;
+}
+
+/* mobile */
+@media all and (max-width: 450px) {
+    body {
+        background-color: red;
+    }
+}
+
+/* tablet */
+@media all and (min-width: 451px) and (max-width: 800px) {
+    body {
+        background-color: green;
+    }
+}
+
+/* monitor */
+@media all and (min-width: 801px) {
+    body {
+        background-color: blue;
+    }
+}
