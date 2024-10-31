@@ -1,0 +1,19 @@
+
+body {
+    height: 100dvh;
+    display: grid;
+    place-content: center;
+}
+
+form {
+    background-color: greenyellow;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+}
+
+div {
+    border: solid;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
