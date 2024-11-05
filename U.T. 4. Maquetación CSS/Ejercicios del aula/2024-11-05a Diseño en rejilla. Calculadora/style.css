@@ -1,0 +1,100 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100dvh;
+    background-color: chartreuse;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.display, .number, .operator {
+    font-size: 5rem;
+    font-weight: bold;
+    display: grid;
+    place-content: center;
+}
+
+.display {
+    background-color: white;
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+    /* grid-column: 1 / 5; */
+    grid-column: 1 / span 4;
+    display: unset;
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+.number {
+    background-color: burlywood;
+    color: white;
+}
+
+.operator {
+    background-color: chocolate;
+    color: white;
+}
+
+.equal {
+    grid-column: 2 / span 2;
+}
+
+/* todo lo que no sea móvil */
+@media screen and (min-width: 481px) {
+    body {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .display {
+        grid-column: 1 / span 5;
+    }
+
+    .six, .seven, .eight, .nine, .zero {
+        grid-row: 2;
+    }
+
+    .one, .two, .three, .four, .five {
+        grid-row: 3;
+    }
+
+    .six, .one {
+        grid-column: 1;
+    }
+
+    .seven, .two {
+        grid-column: 2;
+    }
+
+    .eight, .three {
+        grid-column: 3;
+    }
+
+    .nine, .four {
+        grid-column: 4;
+    }
+
+    .zero, .five {
+        grid-column: 5;
+    }
+
+    .add {
+        grid-row: 4 / span 2;
+        grid-column: 1 / span 2;
+    }
+
+    .equal {
+        grid-column: 3 / span 3;
+        grid-row: 5;
+    }
+}
