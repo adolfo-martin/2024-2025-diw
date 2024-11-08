@@ -1,0 +1,94 @@
+:root {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffe4c4;
+    background-image: url(./images/the-earth.jpg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: black;
+    color: white;
+    mix-blend-mode: multiply;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+main {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "campo       perro      perro  playa"
+        "campo       basurero   quema  quema"
+        "mascarilla  chimeneas  quema  quema"
+        "mascarilla  tala       tala   mar"
+    ;
+    gap: 15px;
+    padding: 15px;
+}
+
+.image {
+    border-radius: 15px;
+    border: solid 5px #8b0000;
+    background-position: center;
+    background-size: cover;
+}
+
+div.image-01 {
+    background-image: url(./images/01.jpg);
+    grid-area: campo;
+}
+
+div.image-02 {
+    background-image: url(./images/02.jpg);
+    grid-area: perro;
+}
+
+div.image-03 {
+    background-image: url(./images/03.jpg);
+    grid-area: playa;
+}
+
+div.image-04 {
+    background-image: url(./images/04.jpg);
+    grid-area: basurero;
+}
+
+div.image-05 {
+    background-image: url(./images/05.jpg);
+    grid-area: quema;
+}
+
+div.image-06 {
+    background-image: url(./images/06.jpg);
+    grid-area: mascarilla;
+}
+
+div.image-07 {
+    background-image: url(./images/07.jpg);
+    grid-area: chimeneas;
+}
+
+div.image-08 {
+    background-image: url(./images/08.jpg);
+    grid-area: mar;
+}
+
+div.image-09 {
+    background-image: url(./images/09.jpg);
+    grid-area: tala;
+}

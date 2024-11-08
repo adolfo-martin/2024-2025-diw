@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100dvh;
+    display: grid;
+    grid-template-areas: 
+        "rojo       azul      azul"
+        "amarillo   amarillo  amarillo"
+        "gris       verde     marron"
+        "chocolate  verde     marron"
+        "chocolate  negro     oliva"
+        "celeste    celeste   celeste"
+    ;
+
+    grid-template-columns: 2fr 1fr 1fr;
+    /* grid-template-rows: 2fr 2fr 1fr 1fr 1fr 2fr; */
+    grid-template-rows: repeat(2, 2fr) repeat(3, 1fr) 2fr;
+}
+
+.red {
+    background-color: red;
+    grid-area: rojo;
+}
+
+.blue {
+    background-color: blue;
+    grid-area: azul;
+}
+
+.yellow {
+    background-color: yellow;
+    grid-area: amarillo;
+}
+
+.grey {
+    background-color: grey;
+    grid-area: gris;
+}
+
+.chocolate {
+    background-color: chocolate;
+    grid-area: chocolate;
+}
+
+.green {
+    background-color: green;
+    grid-area: verde;
+}
+
+.brown {
+    background-color: brown;
+    grid-area: marron;
+}
+
+.black {
+    background-color: black;
+    grid-area: negro;
+}
+
+.olive {
+    background-color: olive;
+    grid-area: oliva;
+}
+
+.cyan {
+    background-color: cyan;
+    grid-area: celeste;
+}

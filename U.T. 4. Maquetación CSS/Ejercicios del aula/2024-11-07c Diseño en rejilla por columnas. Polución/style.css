@@ -1,0 +1,25 @@
+:root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+main {
+    border: solid 10px red;
+    flex-grow: 1;
+}
