@@ -1,0 +1,94 @@
+body {
+    background-color: black;
+}
+
+.cuadrado-azul {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    left: 100px;
+    top: 100px;
+    position: absolute;
+    z-index: 2;
+
+    animation-name: movimiento-cuadrado-azul;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 1500ms;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.cuadrado-amarillo {
+    background-color: yellow;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 400px;
+    top: 400px;
+    z-index: 3;
+    /* transform: rotate(0.125turn); */
+    rotate: 45deg;
+
+    animation-name: cambio-color, movimiento-cuadrado-azul;
+    animation-duration: 3000ms, 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite, 3;
+    animation-direction: alternate;
+}
+
+.circulo-rojo {
+    background-color: red;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation-name: movimiento-circulo-rojo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes movimiento-cuadrado-azul {
+    from {
+        left: 400px;
+        top: 400px;
+    }
+    to {
+        left: 1700px;
+        top: 800px;
+    }
+}
+
+@keyframes cambio-color {
+    from {
+        background-color: chartreuse;
+    }
+    to {
+        background-color: darkgreen;
+    }
+}
+
+@keyframes movimiento-circulo-rojo {
+    0% {
+        left: 100px;
+        top: 100px;
+    }
+    25% {
+        left: 1000px;
+        top: 100px;
+    }
+    50% {
+        left: 1000px;
+        top: 700px;
+    }
+    75% {
+        left: 100px;
+        top: 700px;
+    }
+    100% {
+        left: 100px;
+        top: 100px;
+    }
+}
