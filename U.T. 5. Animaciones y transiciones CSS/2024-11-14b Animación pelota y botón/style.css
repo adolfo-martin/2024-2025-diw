@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: green;
+    overflow: hidden;
+}
+
+.boton {
+    background-image: url(./boton.png);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+}
+
+.pelota {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-image: url(./pelota.png);
+    background-size: cover;
+    animation: movimiento-pelota 3s linear 0s infinite normal both;
+}
+
+.parada {
+    animation-play-state: paused;
+}
+
+@keyframes movimiento-pelota {
+    0% {
+        left: 100px;
+        top: 100px;
+    }
+
+    33% {
+        left: 1000px;
+        top: 700px;
+    }
+
+    66% {
+        left: 300px;
+        top: 800px;
+    }
+
+    100% {
+        left: 100px;
+        top: 100px;
+    }
+}

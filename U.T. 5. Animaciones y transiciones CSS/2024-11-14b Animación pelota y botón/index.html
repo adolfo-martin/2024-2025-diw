@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module">
+        // let estaMoviendoseLaPelota = false;
+
+        document.addEventListener("DOMContentLoaded", _ => {
+            document.querySelector('.boton').addEventListener('click', _ => {
+                // document.querySelector('.pelota').style.animationPlayState = 'running';
+                
+                const nPelota = document.querySelector('.pelota');
+                nPelota.classList.toggle('parada');
+
+                // if (estaMoviendoseLaPelota) {
+                //     nPelota.classList.add('parada');
+                // } else {
+                //     nPelota.classList.remove('parada');
+                // }
+                // estaMoviendoseLaPelota = !estaMoviendoseLaPelota;
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="boton"></div>
+    <div class="pelota parada"></div>
+</body>
+</html>
