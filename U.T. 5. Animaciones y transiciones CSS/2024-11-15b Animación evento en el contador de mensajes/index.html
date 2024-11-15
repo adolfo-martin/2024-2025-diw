@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module">
+        document.addEventListener("DOMContentLoaded", _ => {
+            document.querySelector('#tDivCuadrado').addEventListener('animationstart', mostrarMensajeInicio);
+            document.querySelector('#tDivCuadrado').addEventListener('animationend', mostrarMensajeFin);
+            document.querySelector('#tDivCuadrado').addEventListener('animationiteration', mostrarMensajeRepeticion);
+            document.querySelector('#tDivCuadrado').addEventListener('animationiteration', incrementarContador);
+        });
+
+        let contador = 0;
+
+        const mostrarMensajeInicio = e => console.log('inicio');
+        const mostrarMensajeFin = e => console.log('fin');
+        const mostrarMensajeRepeticion = e => console.log('repeticion');
+        const incrementarContador = e => document.querySelector('#tDivEventos').dataset.contador = contador++;
+    </script>
+</head>
+<body>
+    <div id="tDivEventos" class="eventos" data-contador="0">Eventos</div>
+
+    <div id="tDivCuadrado" class="cuadrado"></div>
+</body>
+</html>

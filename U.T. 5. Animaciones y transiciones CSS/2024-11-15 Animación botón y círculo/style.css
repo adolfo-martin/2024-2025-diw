@@ -1,0 +1,49 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100dvh;
+    display: grid;
+    place-items: center;
+}
+
+.button {
+    font-size: 3rem;
+    padding: 1rem 4rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: black;
+    color: white;
+    position: relative;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: red;
+        border-radius: 50%;
+        width: 400px;
+        height: 400px;
+        z-index: -1;
+        animation: grow-circle 5s linear both paused;
+    }
+    
+    &:hover::before {
+        animation-play-state: running;
+    }
+}
+
+@keyframes grow-circle {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
