@@ -1,0 +1,73 @@
+:root {
+    --width-flag: calc(1541px / 4);
+    --height-first-row: calc(((5209px / 20) / 4) * 5);
+    --height-flag: calc((5209px - var(--height-first-row)) / 19);
+}
+
+table, tr, th, td {
+    border: solid 10px black;
+    border-collapse: collapse;
+    /* transform: scale(0.5); */
+}
+
+th, td {
+    font-size: 5rem;
+}
+
+.flag {
+    border: solid;
+    background-image: url(/flags.png);
+    /* background-size: calc(var(--height-flag) / 1) calc(var(--width-flag) / 1); */
+    background-repeat: no-repeat;
+    width: var(--width-flag);
+    height: var(--height-flag);
+}
+
+.flag-spain {
+    background-position-x: calc(var(--width-flag) * -1);
+    background-position-y: calc(var(--height-first-row) * -1 + var(--height-flag) * -6);
+}
+
+.flag-argentina {
+    background-position-x: calc(var(--width-flag) * -2);
+    background-position-y: calc(var(--height-first-row) * -1 + var(--height-flag) * -0);
+}
+
+.flag-south-corea {
+    background-position-x: calc(var(--width-flag) * -3);
+    background-position-y: calc(var(--height-first-row) * -1 + var(--height-flag) * -10);
+}
+
+.flag-turkey {
+    background-position-x: calc(var(--width-flag) * -0);
+    background-position-y: calc(var(--height-first-row) * -1 + var(--height-flag) * -17);
+}
+
+.flag-sweden {
+    background-position-x: calc(var(--width-flag) * -2);
+    background-position-y: calc(var(--height-first-row) * -1 + var(--height-flag) * -15);
+}
+
+/* 
+span {
+    color: white;
+}
+
+input[type=checkbox]:checked + span {
+    color: black;
+} 
+*/
+
+input[type=checkbox] {
+    display: none;
+    
+    & + span {
+        transition-duration: 2s;
+        transition-property: color;
+        color: white;
+    }
+
+    &:checked + span {
+        color: black;
+    }
+}
