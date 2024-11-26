@@ -1,0 +1,117 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --color-100: white;
+    --color-200: #dde4e7;
+    --color-500: #74749a;
+    --color-900: #00005d;
+    font-size: 32px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: var(--color-200);
+    display: flex;
+    flex-direction: column;
+}
+
+/* header, main, footer {
+    border: solid;
+} */
+
+header {
+    display: flex;
+    background-color: var(--color-900);
+    color: var(--color-100);
+
+    span {
+        flex: 1;
+        text-align: center;
+        padding: 0.5rem;
+    }
+}
+
+main {
+    flex: 1; /* flex-grow: 1; flex-shrink: 0; flex-basis: 0; */
+}
+
+.boton-apertura-menu {
+    background-color: var(--color-500);
+    color: var(--color-100);
+    border: solid 5px var(--color-100);
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    display: inline-grid;
+    place-items: center;
+    writing-mode: vertical-lr;
+    user-select: none;
+    /* z-index: 100; */
+}
+
+
+/* #tChkMenu:not(:focus) ~ nav { */
+/* #tChkMenu:focus ~ nav { */
+
+#tChkMenu {
+    /* display: none; */
+
+    & + nav {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--color-500);
+        color: var(--color-100);
+        transition-duration: 500ms;
+        transition-property: width;
+    }
+    
+    /* &:not(:checked) + nav { */
+    &:not(:focus) + nav {
+        width: 0vw;
+
+        ul {
+            display: none;
+        }
+    }
+
+    /* &:checked + nav { */
+    &:focus + nav {
+        width: 100vw;
+
+    }
+}
+
+.bola {
+    background-color: var(--color-900);
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    left: 50%;
+    animation-name: caida;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+.bola-1 {
+    animation-delay: 1s;
+}
+
+.bola-2 {
+    animation-delay: 2s;
+}
+
+@keyframes caida {
+    0% {
+        top: 20%;
+    }
+    100% {
+        top: 80%;
+    }
+}
