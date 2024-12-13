@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100dvh;
+    background-image: radial-gradient(grey, black);
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    border: solid 20px;
+    width: 400px;
+    aspect-ratio: 16/9;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+}
+
+.image-seat {
+    background-image: url(./seat-124.jpg);
+}
+
+.image-vespa {
+    background-image: url(./vespa.jpg);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+    transition-duration: 3000ms;
+    transition-property: clip-path;
+}
+
+.image-vespa:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.image-seat:hover + .image-vespa {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}

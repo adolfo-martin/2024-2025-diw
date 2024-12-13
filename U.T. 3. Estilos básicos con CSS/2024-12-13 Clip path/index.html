@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+            background-color: lightblue;
+        }
+
+        .image {
+            --radio: 100px;
+            --pos-x: 400px;
+            --pos-y: 400px;
+            clip-path: circle(var(--radio) at var(--pos-x) var(--pos-y));
+        }
+    </style>
+
+    <script type="module">
+        // DOMContentLoaded
+        window.onload = function (e) {
+            const nImage = document.querySelector('.image');
+
+            nImage.onmousemove = function (e) {
+                // const posX = e.offsetX;
+                // const posY = e.offsetY;
+                // console.log(posX, posY);
+
+                const { offsetX: posX, offsetY: posY } = e;
+                console.log(posX, posY);
+
+                nImage.style.setProperty('--pos-x', posX + 'px');
+                nImage.style.setProperty('--pos-y', posY + 'px');
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <img src="/lego-star-wars.jpg" class="image">
+</body>
+</html>

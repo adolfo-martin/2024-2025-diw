@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: lightblue;
+                color: darkblue;
+            }
+
+            h2.dark {
+                display: none;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: darkblue;
+                color: lightblue;
+            }
+
+            h2.light {
+                display: none;
+            }
+        }   
+    </style>
+</head>
+<body>
+    <h1>Light mode or dark mode</h1>
+
+    <h2 class="light">Light mode prefered</h2>
+    <h2 class="dark">Dark mode prefered</h2>
+</body>
+</html>
