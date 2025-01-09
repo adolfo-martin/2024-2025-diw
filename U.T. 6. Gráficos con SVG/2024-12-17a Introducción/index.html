@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="module">
+        window.addEventListener("DOMContentLoaded", _ => {
+            document.querySelector('rect')
+                .addEventListener('mouseover', e => {
+                    const fruta = e.target.dataset.fruta;
+                    const cantidad = e.target.dataset.cantidad;
+
+                    const nDiv = document.createElement('div');
+                    nDiv.setAttribute('id', 'tDivFruta')
+                    nDiv.textContent = `Fruta: ${fruta}. Cantidad: ${cantidad}`;
+                    nDiv.setAttribute('style', `background-color: yellow; position: absolute; top: ${e.clientY}px; left: ${e.clientX}px;`);
+                    document.body.appendChild(nDiv);
+                });
+
+            document.querySelector('rect')
+                .addEventListener('mouseout', e => {
+                    const nDiv = document.querySelector('#tDivFruta');
+                    document.body.removeChild(nDiv);
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="border: solid; width: 400px; height: 400px">
+
+        <!-- <title>Gráfica sobre consumo de fruta</title> -->
+
+        <text x="100" y="100" dy="1rem">4 manzanas</text>
+
+        <line x1="100" y1="100" x2="200" y2="200" stroke="#ff0000"></line>
+
+        <rect x="100" y="250" width="200" height="50" fill="#00ff00" stroke="#0000ff" stroke-width="5"
+            data-fruta="manzanas" data-cantidad="40"></rect>
+    </svg>
+</body>
+
+</html>
