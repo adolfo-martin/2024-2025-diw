@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class="h-screen grid place-items-center">
+    <h1 class="absolute top-[10%]">Hermanos siguientes o siblings (~ virgulilla)</h1>
+
+    <!-- <div>UNO</div>
+    <div>DOS</div>
+    <div class="peer">TRES</div>
+    <div class="peer-hover:bg-red-500">CUATRO</div>
+    <div class="peer-hover:bg-red-500">CINCO</div> -->
+
+    <!-- <div>UNO</div>
+    <div class="peer/dos">DOS</div>
+    <div class="peer/tres">TRES</div>
+    <div class="peer-hover/tres:bg-red-500">CUATRO</div>
+    <div class="peer-hover/tres:bg-red-500 peer-hover/dos:font-extrabold">CINCO</div> -->
+
+    <form class="bg-zinc-300 shadow-2xl w-1/2 rounded-lg p-4">
+        <label>Correo electrónico: </label>
+        <input type="email" class="w-full peer/correo">
+        <p class="peer-valid/correo:invisible text-red-600">Por favor, introduzca un email válido.</p>
+
+        <label>Edad: </label>
+        <input type="number" min="0" max="120" class="peer/edad">
+        <p class="peer-valid/edad:invisible text-red-600">Por favor, introduzca una edad válida.</p>
+    </form>
+</body>
+</html>

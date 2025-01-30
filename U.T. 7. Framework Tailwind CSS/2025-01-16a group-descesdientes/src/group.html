@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+
+    <style>
+        /* .antecesor:hover .descendiente-dos {
+            background-color: yellow;
+        } */
+    </style>
+</head>
+<body>
+    <h1>Grupos - Descendientes</h1>
+    <br>
+
+    <!-- <div class="antecesor">
+        <div class="descendiente-uno">UNO</div>
+        <div class="descendiente-dos">DOS</div>
+    </div> -->
+
+    <!-- <div class="group">
+        <div>
+            <div>
+                <div>UNO</div>
+                <div class="group-hover:bg-yellow-300">DOS</div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="group/amarillo">
+        <div>UNO</div>
+        <div class="group-hover/amarillo:bg-yellow-300">DOS</div>
+
+        <div class="group/rosa">
+            <div>TRES</div>
+            <div class="group-hover/rosa:bg-red-300">CUATRO</div>
+        </div>
+    </div> -->
+
+    <!-- <br>
+    <button class="group border border-black">
+        Activar
+        <span class="font-extrabold group-focus:bg-blue-500">Con focus</span>
+        <span class="font-extrabold">Sin focus</span>
+    </button> -->
+
+    <br><br>
+    <ul class="group es-verano">
+        <li class="font-bold text-black group-[.es-primavera]:text-green-500">Primavera</li>
+        <li class="font-bold text-black group-[.es-verano]:text-yellow-500">Verano</li>
+        <li class="font-bold text-black group-[.es-otoño]:text-orange-800">Otoño</li>
+        <li class="font-bold text-black group-[.es-invierno]:text-blue-500">Invierno</li>
+    </ul>
+
+    <script>
+        document.querySelector('ul').classList.remove('es-verano');
+        document.querySelector('ul').classList.add('es-otoño');
+        document.querySelector('ul').classList.toggle('es-verano');
+        document.querySelector('ul').classList.toggle('es-verano');
+        
+    </script>
+</body>
+</html>
