@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="h-dvh grid place-content-center">
+    <!-- <button type="button" class="
+        bg-blue-500 text-white font-bold py-2 px-4 rounded-lg relative
+        after:content-['NEW'] after:bg-[#ff0000] after:absolute after:-top-[10px] after:-right-[20px] after:px-2 after:animate-bounce after:grid after:place-items-center
+        ">Guardar cambios</button>    
+        
+        <br>
+        <br>
+        <br>
+        <div class="spin-adolfo"></div>
+        <br>
+        <br>
+        <br>
+        <div class="spin-adolfo"></div> -->
+
+    <!-- sm:transition sm:duration-[2000ms] hover:bg-blue-900 hover:scale-110 -->
+
+    <script type="module">
+      let seconds = 0;
+
+      setInterval(() => {
+        document
+          .querySelector("#tSpnSeconds")
+          .setAttribute("style", `--value: ${seconds};`);
+
+        document.querySelector("#tSpnSeconds").textContent = seconds + '%';
+
+        seconds++;
+        if (seconds === 60) seconds = 0;
+      }, 1000);
+    </script>
+
+    <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
+      <div
+        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
+      >
+        <span class="countdown font-mono text-5xl">
+          <span style="--value: 15"></span>
+        </span>
+        days
+      </div>
+      <div
+        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
+      >
+        <span class="countdown font-mono text-5xl">
+          <span style="--value: 10"></span>
+        </span>
+        hours
+      </div>
+      <div
+        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
+      >
+        <span class="countdown font-mono text-5xl">
+          <span style="--value: 24"></span>
+        </span>
+        min
+      </div>
+      <div
+        class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"
+      >
+        <span class="countdown font-mono text-5xl">
+          <span style="--value: 0"></span>
+        </span>
+        sec
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div id="tSpnSeconds"
+      class="radial-progress"
+      style="--value: 70; --size: 12rem; --thickness: 2rem"
+      role="progressbar"
+    >
+      70%
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <ul class="timeline">
+      <li>
+        <div class="timeline-start">2000</div>
+        <div class="timeline-middle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-5 w-5"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box">Nace el bebe</div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-start">2009</div>
+        <div class="timeline-middle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-5 w-5"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box">Hace la Primera Comunión</div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-start">2014</div>
+        <div class="timeline-middle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-5 w-5"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box">Termina el colegio</div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-start">2018</div>
+        <div class="timeline-middle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-5 w-5"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box">Termina el instituto</div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-start">2034</div>
+        <div class="timeline-middle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-5 w-5"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box">Termina la universidad</div>
+      </li>
+    </ul>
+  </body>
+</html>

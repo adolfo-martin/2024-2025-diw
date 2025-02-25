@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .spin-adolfo {
+        @apply size-20 animate-spin after:content-[''] after:inline-block after:size-5 after:bg-rojo-fuerte after:rounded-full;
+    }
+}
