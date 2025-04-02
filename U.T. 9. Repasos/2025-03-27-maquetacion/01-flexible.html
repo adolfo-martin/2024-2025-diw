@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 100dvh;
+            margin: 0;
+        }
+
+        .padre {
+            height: 100%;
+            border: solid 5px chartreuse;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .hijo {
+            background-color: red;
+            border: solid;
+            width: 80px;
+            /* flex-basis: 80px;
+            flex-grow: 1000;
+            flex-shrink: 0; */
+            flex: 1000 0 80px;
+        }
+
+        /* .hijo:nth-child(3) {
+            align-self: center;
+            flex-grow: 1;
+        }
+
+        .hijo:nth-child(5) {
+            flex-grow: 2;
+        } */
+    </style>
+</head>
+<body>
+    
+    <div class="padre">
+        <div class="hijo"></div>
+        <div class="hijo"></div>
+        <div class="hijo"></div>
+        <div class="hijo"></div>
+        <div class="hijo"></div>
+        <div class="hijo"></div>
+    </div>
+
+</body>
+</html>

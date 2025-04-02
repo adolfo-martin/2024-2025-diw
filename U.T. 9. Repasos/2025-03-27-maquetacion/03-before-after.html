@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100dvh;
+            display: grid;
+            place-content: center;
+        }
+
+        div {
+            position: relative;
+            background-color: lightgreen;
+            border-top: solid 3px darkgreen;
+            border-bottom: solid 3px darkgreen;
+            padding: 0.5rem 2rem 0.5rem 2.5rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 10%;
+                left: 10px;
+                width: 50px;
+                height: 50px;
+                background-image: url(./icon-email.png);
+                background-size: cover;
+            }
+
+            &::after {
+                content: attr(data-quantity);
+                font-size: 0.5em;
+                display: grid;
+                place-content: center;
+                position: absolute;
+                top: 0.25em;
+                right: 0.25em;
+                background-color: red;
+                color: white;
+                border-radius: 50%;
+                width: 2.5em;
+                height: 2.5em;
+            }
+        }
+    </style>
+
+    <script type="module">
+        setInterval(() => {
+            let quantity = parseInt(document.querySelector('div').dataset.quantity);
+            quantity += 1;
+            document.querySelector('div').dataset.quantity = quantity;
+        }, 1000);
+    </script>
+</head>
+<body>
+    <div data-quantity="0">Correos no leidos</div>
+</body>
+</html>

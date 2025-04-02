@@ -1,0 +1,5 @@
+### Todas las categorías
+GET https://dummyjson.com/products/categories/?delay=2000
+
+### Todos los productos de una categoría concreta
+GET https://dummyjson.com/products/category/smartphones/?delay=2000
